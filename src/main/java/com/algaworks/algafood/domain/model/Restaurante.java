@@ -14,17 +14,17 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Restaurante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
 
-    @EqualsAndHashCode.Exclude
+
     private String nome;
 
     @Column(name = "taxa_frete")
-    @EqualsAndHashCode.Exclude
     private BigDecimal taxaFrete;
 }
