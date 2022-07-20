@@ -22,6 +22,6 @@ public class FormaPagamento {
     @Id
     private Long id;
 
-    @Column(name = "descricao", nullable = false)
+    @Column(nullable = false)
     private String descricao;
 }
