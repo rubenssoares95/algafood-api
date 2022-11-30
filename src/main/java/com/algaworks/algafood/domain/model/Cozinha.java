@@ -1,5 +1,7 @@
 package com.algaworks.algafood.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +23,8 @@ public class Cozinha {
     @EqualsAndHashCode.Include
     private Long id;
 
+//    @JsonIgnore
+    @JsonProperty(value = "titulo")
     @Column(nullable = false)
     private String nome;
 }
